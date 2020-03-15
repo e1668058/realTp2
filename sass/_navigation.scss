@@ -1,14 +1,136 @@
-.main-navigation {
-    @include flex-row-center();
-    position: fixed;
-    z-index: 30;
+@media screen and (min-width: 790px) {
+    .main-navigation {
+        @include flex-row-center();
+        height: 5%;
+        background-color: orange;
+        position: fixed;
+        z-index: 30;
 
-    .menu {
-        li {
-            margin-right: 10px;
-            a {
-                @extend %custom-mono-font;
+        #checkMenu {
+            display: none;
+            z-index: 1;
+        }
+
+        #btnMenu {
+            display: none;
+        }
+
+        .menu {
+            li {
+                margin-right: 15px;
             }
+        }
+    }
+}
+@media screen and (max-width: 789px) {
+    .main-navigation {
+        @include flex-row-center();
+        height: 5%;
+        background-color: orange;
+        position: fixed;
+        z-index: 30;
+
+        #checkMenu {
+            display: none;
+            z-index: 1;
+
+            &:checked ~ #btnMenu{
+                transform: rotate(90deg);
+
+            }
+            &:checked ~ .menu>li {
+                opacity: 1;
+                // transform: translateY(100px);
+                //Donne l'animation pour toutes les li avec un delai
+                    @for $i from 1 to 11 {
+                        &:nth-child(#{$i}) {
+                            animation: animMenu 2.5s ease-in-out forwards;
+                            animation-delay: (1s * $i)- 2;
+                        }
+                    }
+            }
+
+        }
+
+        #btnMenu {
+            display: block;
+            transition: transform 1s;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: fixed;
+            top: -300px;
+            left: 10px;
+            @include flex-row-center();
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            
+            li {
+                opacity: 1;
+                margin-right: 15px;
+                width: 100px;
+                height: 30px;
+                padding: 10px;
+                //Donne une couleur pour toutes les li
+                @for $i from 1 to 11 {
+                    &:nth-child(#{$i}) {
+                        @if $i == 1 {
+                            background-color: #ffa500;
+                        }
+                        @else if $i == 2 {
+                            background-color: #ffae19;                            ;
+                        }
+                        @else if $i == 3 {
+                            background-color: #ffb732;
+                        }
+                        @else if $i == 4 {
+                            background-color: #ffc04c;
+                        }
+                        @else if $i == 5 {
+                            background-color: #ffc966;
+                        }
+                        @else if $i == 6 {
+                            background-color: #ffd27f;
+                        }
+                        @else if $i == 7 {
+                            background-color: #ffdb99;
+                        }
+                        @else if $i == 8 {
+                            background-color: #ffe4b2;
+                        }
+                        @else if $i == 9 {
+                            background-color: #ffedcc;
+                        }
+                        @else if $i == 10 {
+                            background-color: #fff6e5;
+                        }
+                        @else if $i == 11 {
+                            background-color: #ffffff;
+                        }
+                    }
+                }
+                // transition: transform 2s;
+                // &:hover {
+                //     @for $i from 1 to 10 {
+                //         &:nth-child(#{$i}) {
+                //             animation: animMenu 2.5s ease-in-out forwards;
+                //             animation-delay: (1s * $i)- 2;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+
+    @keyframes animMenu {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(350px);
         }
     }
 }

@@ -15,7 +15,7 @@
 
 //Pour couvrir la page en petit points
 .site-content::after {
-    // @include dot-overlay();
+    @include dot-overlay();
 }
 
 @mixin flex-row-center {
@@ -23,5 +23,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+}
+
+@mixin none {
+    display: none;
 }

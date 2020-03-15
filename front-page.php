@@ -83,7 +83,7 @@ get_header();
             while ($query1->have_posts()) {
                 $query1->the_post();
                 echo '<div class="evenement">';
-                echo '<p>Survoler l\'image!</p>';
+                echo '<p><i>Survoler l\'image!</i></p>';
                     echo '<div class="imgEvenement">';
                         echo get_the_post_thumbnail($post, 'thumbnail');
                     echo '</div>';

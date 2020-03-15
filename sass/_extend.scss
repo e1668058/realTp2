@@ -1,8 +1,10 @@
 %custom-mono-font {
     font-family: 'PT Mono', monospace;
-    color: orange;
+    color: black;
+    transition: border-bottom 2s ease-out, color 2s ease-out;
 
     &:hover {
-        color: orchid;
+        border-bottom: 3px solid $couleur_feu;
+        color: $couleur_feu;
     }
 }

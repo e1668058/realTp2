@@ -13,13 +13,41 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Mono&display=swap");
-.main-navigation .menu li a {
-  font-family: 'PT Mono', monospace;
-  color: orange;
+.site-content::after {
+  content: '';
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  background: rgba(151, 33, 33, 0.5);
+  background-image: radial-gradient(black 2%, transparent 10%);
+  background-size: 10px 15px;
+  z-index: 10;
 }
 
-.main-navigation .menu li a:hover {
-  color: orchid;
+.menu .li a, .content-Nouvelle .nouvelle .infoNouvelle a, .content-Evenement .evenement .infoEvenement a {
+  font-family: 'PT Mono', monospace;
+  color: black;
+  -webkit-transition: border-bottom 2s ease-out, color 2s ease-out;
+  transition: border-bottom 2s ease-out, color 2s ease-out;
+}
+
+.menu .li a:hover, .content-Nouvelle .nouvelle .infoNouvelle a:hover, .content-Evenement .evenement .infoEvenement a:hover {
+  border-bottom: 3px solid orangered;
+  color: orangered;
+}
+
+.entry-header {
+  padding-top: 20px;
+  position: relative;
+  z-index: 29;
+}
+
+.entry-footer {
+  display: none;
 }
 
 .content-Nouvelle {
@@ -78,6 +106,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.content-Evenement .evenement i {
+  margin-left: 8px;
 }
 
 .content-Evenement .evenement .imgEvenement {
@@ -218,26 +250,216 @@
           animation: changementDeFormes 3.5s infinite;
 }
 
-.main-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: yellow;
-  position: fixed;
-  z-index: 30;
+@media screen and (min-width: 790px) {
+  .main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5%;
+    background-color: orange;
+    position: fixed;
+    z-index: 30;
+  }
+  .main-navigation #checkMenu {
+    display: none;
+    z-index: 1;
+  }
+  .main-navigation #btnMenu {
+    display: none;
+  }
+  .main-navigation .menu li {
+    margin-right: 15px;
+  }
 }
 
-.main-navigation .menu li {
-  margin-right: 10px;
+@media screen and (max-width: 789px) {
+  .main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5%;
+    background-color: orange;
+    position: fixed;
+    z-index: 30;
+  }
+  .main-navigation #checkMenu {
+    display: none;
+    z-index: 1;
+  }
+  .main-navigation #checkMenu:checked ~ #btnMenu {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li {
+    opacity: 1;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(1) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(2) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(3) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(4) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(5) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(6) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(7) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(8) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(9) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+  }
+  .main-navigation #checkMenu:checked ~ .menu > li:nth-child(10) {
+    -webkit-animation: animMenu 2.5s ease-in-out forwards;
+            animation: animMenu 2.5s ease-in-out forwards;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+  }
+  .main-navigation #btnMenu {
+    display: block;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    cursor: pointer;
+  }
+  .main-navigation .menu {
+    position: fixed;
+    top: -300px;
+    left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .main-navigation .menu li {
+    opacity: 1;
+    margin-right: 15px;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+  }
+  .main-navigation .menu li:nth-child(1) {
+    background-color: #ffa500;
+  }
+  .main-navigation .menu li:nth-child(2) {
+    background-color: #ffae19;
+  }
+  .main-navigation .menu li:nth-child(3) {
+    background-color: #ffb732;
+  }
+  .main-navigation .menu li:nth-child(4) {
+    background-color: #ffc04c;
+  }
+  .main-navigation .menu li:nth-child(5) {
+    background-color: #ffc966;
+  }
+  .main-navigation .menu li:nth-child(6) {
+    background-color: #ffd27f;
+  }
+  .main-navigation .menu li:nth-child(7) {
+    background-color: #ffdb99;
+  }
+  .main-navigation .menu li:nth-child(8) {
+    background-color: #ffe4b2;
+  }
+  .main-navigation .menu li:nth-child(9) {
+    background-color: #ffedcc;
+  }
+  .main-navigation .menu li:nth-child(10) {
+    background-color: #fff6e5;
+  }
+  @-webkit-keyframes animMenu {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(350px);
+              transform: translateY(350px);
+    }
+  }
+  @keyframes animMenu {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(350px);
+              transform: translateY(350px);
+    }
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
+        i {
+            margin-left: 8px;
+        }
 
         .imgEvenement {
             margin-right: 30px;
@@ -14,6 +18,10 @@
         .infoEvenement {
             width: 80%;
             margin-right: 20px;
+
+            a {
+                @extend %custom-mono-font;
+            }
 
             p {
                 font-family: 'Kalam', cursive;

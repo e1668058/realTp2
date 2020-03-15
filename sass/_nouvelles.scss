@@ -15,6 +15,10 @@
         .infoNouvelle {
             display: flex;
             flex-direction: column;
+
+            a {
+                @extend %custom-mono-font;
+            }
         }
     }
 }

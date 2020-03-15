@@ -1,0 +1,12 @@
+.entry-header {
+    padding-top: 20px;
+    position: relative;
+    z-index: 29;
+}
+.menu {
+    .li {
+        a {
+            @extend %custom-mono-font;
+        }
+    }
+}

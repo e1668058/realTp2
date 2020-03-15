@@ -28,14 +28,14 @@
   z-index: 10;
 }
 
-.content-Nouvelle .nouvelle .infoNouvelle a, .content-Evenement .evenement .infoEvenement a {
+.content-Nouvelle .nouvelle .infoNouvelle a, .content-Evenement .evenement .infoEvenement a, .site-main .gridH3:hover {
   font-family: 'PT Mono', monospace;
   color: black;
   -webkit-transition: border-bottom 2s ease-out, color 2s ease-out;
   transition: border-bottom 2s ease-out, color 2s ease-out;
 }
 
-.content-Nouvelle .nouvelle .infoNouvelle a:hover, .content-Evenement .evenement .infoEvenement a:hover {
+.content-Nouvelle .nouvelle .infoNouvelle a:hover, .content-Evenement .evenement .infoEvenement a:hover, .site-main .gridH3:hover {
   border-bottom: 3px solid orangered;
   color: orangered;
 }
@@ -497,5 +497,43 @@
               transform: translateY(350px);
     }
   }
+}
+
+.mois {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[3];
+      grid-template-columns: repeat(3, 2fr);
+  -ms-grid-rows: (2fr)[1];
+      grid-template-rows: repeat(1, 2fr);
+  font-size: 2em;
+  margin: 0 auto;
+}
+
+.mois div {
+  margin: 0 auto;
+  border: 10px solid #fff;
+}
+
+.site-main {
+  border: 2px solid black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-main .gridH3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 28;
+  border: 10px solid #fff;
+}
+
+.site-main .gridH32 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 28;
+  border: 10px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */

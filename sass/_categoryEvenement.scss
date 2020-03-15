@@ -1,0 +1,38 @@
+.mois {
+    display:grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(1, 2fr);
+    font-size: 2em;
+    margin: 0 auto;
+
+    div {
+        margin: 0 auto;
+        border: 10px solid #fff;
+
+    }
+}
+.site-main {
+    border: 2px solid black;
+    width: 90%;
+    margin: 0 auto;
+
+    .gridH3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 28;
+        border: 10px solid #fff;
+    
+        &:hover {
+            @extend %custom-mono-font;
+        }
+    }
+
+    .gridH32 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        z-index: 28;
+        border: 10px solid #fff;
+    }
+}

@@ -18,6 +18,15 @@
         .menu {
             li {
                 margin-right: 15px;
+
+                a {
+                    transition: border-bottom 2s ease-out, color 2s ease-out;
+
+                    &:hover {
+                        border-bottom: 3px solid $couleur_feu;
+                        color: $couleur_feu;
+                    }
+                }
             }
         }
     }
@@ -81,7 +90,7 @@
                             background-color: #ffa500;
                         }
                         @else if $i == 2 {
-                            background-color: #ffae19;                            ;
+                            background-color: #ffae19;                            
                         }
                         @else if $i == 3 {
                             background-color: #ffb732;

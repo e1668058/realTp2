@@ -28,14 +28,14 @@
   z-index: 10;
 }
 
-.menu .li a, .content-Nouvelle .nouvelle .infoNouvelle a, .content-Evenement .evenement .infoEvenement a {
+.content-Nouvelle .nouvelle .infoNouvelle a, .content-Evenement .evenement .infoEvenement a {
   font-family: 'PT Mono', monospace;
   color: black;
   -webkit-transition: border-bottom 2s ease-out, color 2s ease-out;
   transition: border-bottom 2s ease-out, color 2s ease-out;
 }
 
-.menu .li a:hover, .content-Nouvelle .nouvelle .infoNouvelle a:hover, .content-Evenement .evenement .infoEvenement a:hover {
+.content-Nouvelle .nouvelle .infoNouvelle a:hover, .content-Evenement .evenement .infoEvenement a:hover {
   border-bottom: 3px solid orangered;
   color: orangered;
 }
@@ -44,6 +44,34 @@
   padding-top: 20px;
   position: relative;
   z-index: 29;
+}
+
+.entry-header .entry-title {
+  color: grey;
+  -webkit-animation: animtitre 2s ease-in-out infinite alternate;
+          animation: animtitre 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes animtitre {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+@keyframes animtitre {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
 }
 
 .entry-footer {
@@ -279,6 +307,14 @@
   }
   .main-navigation .menu li {
     margin-right: 15px;
+  }
+  .main-navigation .menu li a {
+    -webkit-transition: border-bottom 2s ease-out, color 2s ease-out;
+    transition: border-bottom 2s ease-out, color 2s ease-out;
+  }
+  .main-navigation .menu li a:hover {
+    border-bottom: 3px solid orangered;
+    color: orangered;
   }
 }
 

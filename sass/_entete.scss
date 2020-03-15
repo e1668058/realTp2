@@ -2,11 +2,18 @@
     padding-top: 20px;
     position: relative;
     z-index: 29;
+    
+    .entry-title {
+        color: grey;
+        animation: animtitre 2s ease-in-out infinite alternate;
+    }
 }
-.menu {
-    .li {
-        a {
-            @extend %custom-mono-font;
-        }
+
+@keyframes animtitre {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(100px);
     }
 }

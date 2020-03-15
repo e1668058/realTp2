@@ -149,6 +149,39 @@
   margin-right: 20px;
 }
 
+.content-Evenement .evenement .infoEvenement .titleEvenement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-Evenement .evenement .infoEvenement .titleEvenement .btn {
+  margin-left: 5px;
+}
+
+.content-Evenement .evenement .infoEvenement .lesP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .content-Evenement .evenement .infoEvenement p {
   font-family: 'Kalam', cursive;
 }
@@ -535,5 +568,10 @@
   position: relative;
   z-index: 28;
   border: 10px solid #fff;
+}
+
+.site-main .nav-next, .site-main .post-thumbnail, .site-main .entry-content {
+  position: relative;
+  z-index: 29;
 }
 /*# sourceMappingURL=style.css.map */

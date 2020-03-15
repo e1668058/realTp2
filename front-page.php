@@ -91,8 +91,12 @@ get_header();
                     $link = get_permalink();
                     $title = get_the_title();
                     echo '<div class="infoEvenement">';
-                        echo '<h4><a href='.$link.'>'.$title.' - '.get_the_date('d/m/Y').'</a></h4>';
-                        echo '<p>'.substr(get_the_excerpt(),0,200) .'.</p>';
+                        echo '<div class="titleEvenement">';
+                            echo '<h4><a href='.$link.'>'.$title.' - '.get_the_date('d/m/Y').'</a></h4>';
+                            echo '<button id='.get_the_ID().' class=btn>Lire un peu</button>';
+                        echo '</div>'; 
+                        
+                        echo '<p id='.get_the_ID().'1 class=desc>'.substr(get_the_excerpt(),0,200) .'<span id='.get_the_ID().'2 class=desc2></span></p>';
                         echo '<div class=pathSquare></div>';
                     echo '</div>';
                 echo '</div>';

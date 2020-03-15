@@ -35,4 +35,10 @@
         z-index: 28;
         border: 10px solid #fff;
     }
+
+    .nav-next, .post-thumbnail, .entry-content {
+        position: relative;
+        z-index: 29;
+    }
 }
+

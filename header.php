@@ -56,9 +56,9 @@
             <input id="checkMenu" type="checkbox">
             <label id="btnMenu" for="checkMenu">&#9776;</label>
             <ul class='menu'>
-                <li><a href="http://localhost/wordpress/">Accueil</a></li>
-                <li><a href="http://localhost/wordpress/category/nouvelle/">Nouvelle</a></li>
-                <li><a href="http://localhost/wordpress/category/evenement/">Événement</a></li>
+                <li><a href="https://e1668058.webdev.cmaisonneuve.qc.ca/tp2/">Accueil</a></li>
+                <li><a href="https://e1668058.webdev.cmaisonneuve.qc.ca/tp2/category/nouvelle/">Nouvelle</a></li>
+                <li><a href="https://e1668058.webdev.cmaisonneuve.qc.ca/tp2/category/evenement/">Événement</a></li>
                 <li><a href="">OptionA</a></li>
                 <li><a href="">optionB</a></li>
                 <li><a href="">optionC</a></li>

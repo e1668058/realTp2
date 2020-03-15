@@ -1,0 +1,8 @@
+%custom-mono-font {
+    font-family: 'PT Mono', monospace;
+    color: orange;
+
+    &:hover {
+        color: orchid;
+    }
+}

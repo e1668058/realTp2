@@ -1,0 +1,39 @@
+@keyframes textShadow{
+    from {
+        text-shadow: 0px 0px;
+    }
+    to{
+        text-shadow: 2px 2px #99ff66;
+    }
+}
+
+.animTextShadow {
+    animation : textShadow 2s infinite; 
+}
+
+@keyframes changementDeFormes{
+    0% {
+        clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+    }
+    25% {
+        transition-timing-function: ease-out;
+        transform: rotate(720deg);
+    }
+    45%{
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    }
+    65% {
+        transition-timing-function: ease-out;
+        transform: rotate(-720deg);
+    }
+    85% {
+        clip-path: circle(50% at 50% 50%);
+    }
+    100% {
+        clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.animForme {
+    animation : changementDeFormes 3.5s infinite; 
+}

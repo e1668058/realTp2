@@ -1,0 +1,21 @@
+.content-Nouvelle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: #ffb3b3;
+    z-index: 20;
+
+    .nouvelle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+        .infoNouvelle {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+

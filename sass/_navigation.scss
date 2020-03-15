@@ -1,3 +1,17 @@
-p {
-    color: orangered;
+.main-navigation {
+    @include flex-row-center();
+    position: fixed;
+    z-index: 30;
+
+    .menu {
+        li {
+            margin-right: 10px;
+            a {
+                @extend %custom-mono-font;
+            }
+        }
+    }
 }
+
+
+

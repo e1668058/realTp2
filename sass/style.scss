@@ -11,8 +11,7 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  Underscores-enfant
 */
-
-@import "_navigation.scss";
+@import "_typography.scss";
 
 @import "_entete.scss";
 
@@ -24,6 +23,10 @@
 
 @import "_nouvelles.scss";
 
-@import "_typography.scss";
-
 @import "_variable.scss";
+
+@import "_evenements.scss";
+
+@import "_animContenu.scss";
+
+@import "_navigation.scss";

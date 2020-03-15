@@ -54,6 +54,52 @@ get_header();
 
 		endwhile; // End of the loop.
         ?>
+        
+        <div class="content-Nouvelle">
+            <?php 
+            echo '<h2>Nos 3 derniers articles</h2>';
+            echo '<div class="nouvelle">';
+            while ($query2->have_posts()) {
+                $query2->the_post();
+                    echo '<div class="infoNouvelle">';
+                    $link = get_permalink();
+                    $title = get_the_title();
+                    echo '<div class="titleNouvelle">';
+                        echo '<h4><a href='.$link.'>'.$title.'</a></h4>';
+                    echo '</div>';
+
+                    echo '<div class="imgNouvelle">';
+                        echo get_the_post_thumbnail($post, 'thumbnail');
+                    echo '</div>';
+                    echo '</div>';
+            }
+            echo '</div>';
+            ?>
+        </div>
+
+        <div class="content-Evenement">
+            <?php 
+            echo '<h2>Voici les 3 prochains événements à venir</h2>';
+            while ($query1->have_posts()) {
+                $query1->the_post();
+                echo '<div class="evenement">';
+                echo '<p>Survoler l\'image!</p>';
+                    echo '<div class="imgEvenement">';
+                        echo get_the_post_thumbnail($post, 'thumbnail');
+                    echo '</div>';
+
+                    $link = get_permalink();
+                    $title = get_the_title();
+                    echo '<div class="infoEvenement">';
+                        echo '<h4><a href='.$link.'>'.$title.' - '.get_the_date('d/m/Y').'</a></h4>';
+                        echo '<p>'.substr(get_the_excerpt(),0,200) .'.</p>';
+                        echo '<div class=pathSquare></div>';
+                    echo '</div>';
+                echo '</div>';
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
 
         </div>
         

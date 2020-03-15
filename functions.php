@@ -12,6 +12,10 @@ function main_js() {
 }
 add_action('wp_enqueue_scripts', 'main_js');
 
+function main_animation_js() {
+    wp_enqueue_script( 'main_animation', get_stylesheet_directory_uri() . '/js/main_animation.js', null, 1.1, true);
+}
+add_action('wp_enqueue_scripts', 'main_animation_js');
 
 /* Permet d'adapter la requête principale avant qu'elle ne s'exécute */ 
 function extraire_evenement( $query ) {

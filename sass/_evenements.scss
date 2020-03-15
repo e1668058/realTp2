@@ -1,0 +1,46 @@
+.content-Evenement {
+    position: relative;
+    background-color: #ffb3b3;
+    z-index: 20;
+    .evenement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .imgEvenement {
+            margin-right: 30px;
+        }
+
+        .infoEvenement {
+            width: 80%;
+            margin-right: 20px;
+
+            p {
+                font-family: 'Kalam', cursive;
+            }
+
+            .pathSquare {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                background-image: linear-gradient(80deg, #4dd6cd 9.09%, #11b3db 9.09%, #11b3db 40.91%, #357ede 40.91%, #357ede 50%, #4dd6cd 50%, #4dd6cd 59.09%, #11b3db 59.09%, #11b3db 90.91%, #357ede 90.91%, #357ede 100%);
+                background-size: 11.17px 63.35px;
+                height: 10px;
+                stroke: #000;
+                stroke-miterlimit: 10;
+                stroke-width: 1px;
+                animation: lineColor 5s infinite alternate;
+            }
+            
+        }
+    }
+}
+
+@keyframes lineColor{
+    from {
+        background-image: linear-gradient(80deg, #4dd6cd 9.09%, #11b3db 9.09%, #11b3db 40.91%, #357ede 40.91%, #357ede 50%, #4dd6cd 50%, #4dd6cd 59.09%, #11b3db 59.09%, #11b3db 90.91%, #357ede 90.91%, #357ede 100%);
+        height: 10px;
+    }
+    to{
+        background-image: linear-gradient(80deg, #ee5550 9.09%, #ec4310 9.09%, #ec4310 40.91%, #e7ac2b 40.91%, #e7ac2b 50%, #ee5550 50%, #ee5550 59.09%, #ec4310 59.09%, #ec4310 90.91%, #e7ac2b 90.91%, #e7ac2b 100%);
+        height: 2px;
+    }
+}

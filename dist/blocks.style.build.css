@@ -1,0 +1,207 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-my-block {
+  background: white;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  height: 300px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); }
+  .wp-block-cgb-block-my-block h1 {
+    position: absolute;
+    -webkit-animation: move 1s infinite alternate;
+            animation: move 1s infinite alternate; }
+  .wp-block-cgb-block-my-block .prudence:nth-child(1) {
+    top: 25%;
+    -webkit-animation: top 1s infinite alternate;
+            animation: top 1s infinite alternate; }
+  .wp-block-cgb-block-my-block .prudence:nth-child(2) {
+    bottom: 25%;
+    -webkit-animation: bot 1s infinite alternate;
+            animation: bot 1s infinite alternate; }
+  .wp-block-cgb-block-my-block .prudence:nth-child(3) {
+    left: 25%;
+    -webkit-animation: leftSide 1s infinite alternate;
+            animation: leftSide 1s infinite alternate;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  .wp-block-cgb-block-my-block .prudence:nth-child(4) {
+    right: 25%;
+    -webkit-animation: rightSide 1s infinite alternate;
+            animation: rightSide 1s infinite alternate;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+
+@-webkit-keyframes top {
+  0% {
+    top: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    top: 0; } }
+
+@keyframes top {
+  0% {
+    top: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    top: 0; } }
+
+@-webkit-keyframes bot {
+  0% {
+    bottom: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    bottom: 0; } }
+
+@keyframes bot {
+  0% {
+    bottom: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    bottom: 0; } }
+
+@-webkit-keyframes leftSide {
+  0% {
+    left: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    left: -50%; } }
+
+@keyframes leftSide {
+  0% {
+    left: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    left: -50%; } }
+
+@-webkit-keyframes rightSide {
+  0% {
+    right: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    right: -50%; } }
+
+@keyframes rightSide {
+  0% {
+    right: 25%;
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  15% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  20% {
+    -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg); }
+  25% {
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  100% {
+    right: -50%; } }

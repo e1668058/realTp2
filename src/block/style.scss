@@ -1,0 +1,133 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-my-block  {
+  background: white;
+  // border: 0.2rem dotted $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: grab;
+  height: 300px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  
+  h1 {
+    position: absolute;
+    animation: move 1s infinite alternate;
+  }
+
+  .prudence:nth-child(1) {
+    top: 25%;
+    animation: top 1s infinite alternate;
+  }
+
+  .prudence:nth-child(2) {
+    bottom: 25%;
+    animation: bot 1s infinite alternate;
+  }
+
+  .prudence:nth-child(3) {
+    left: 25%;
+    animation: leftSide 1s infinite alternate;
+    animation-delay: 1s;
+  }
+
+  .prudence:nth-child(4) {
+    right: 25%;
+    animation: rightSide 1s infinite alternate;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes top {
+  0% {
+    top: 25%;
+    transform: skewX(-15deg);
+  }
+  15% { 
+    transform: skewX(15deg); 
+  }
+  20% { 
+    transform: skewX(-15deg); 
+  }
+  25% { 
+    transform: skewX(15deg); 
+  }
+  30% { 
+    transform: skewX(0deg);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bot {
+  0% {
+    bottom: 25%;
+    transform: skewX(-15deg);
+  }
+  15% { 
+    transform: skewX(15deg); 
+  }
+  20% { 
+    transform: skewX(-15deg); 
+  }
+  25% { 
+    transform: skewX(15deg); 
+  }
+  30% { 
+    transform: skewX(0deg);
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes leftSide {
+  0% {
+    left: 25%;
+    transform: skewX(-15deg);
+  }
+  15% { 
+    transform: skewX(15deg); 
+  }
+  20% { 
+    transform: skewX(-15deg); 
+  }
+  25% { 
+    transform: skewX(15deg); 
+  }
+  30% { 
+    transform: skewX(0deg);
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes rightSide {
+  0% {
+    right: 25%;
+    transform: skewX(-15deg);
+  }
+  15% { 
+    transform: skewX(15deg); 
+  }
+  20% { 
+    transform: skewX(-15deg); 
+  }
+  25% { 
+    transform: skewX(15deg); 
+  }
+  30% { 
+    transform: skewX(0deg);
+  }
+  100% {
+    right: -50%;
+  }
+}
